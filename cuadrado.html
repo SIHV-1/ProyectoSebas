@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Cuadrado</title>
+</head>
+
+<body>
+    <h1>El codigo esta en consola</h1>
+    <a href="../index.html">Regresar al inicio</a>
+
+	<h2 id="title">Cuadrado</h2>
+	<input id="base" type="text" value="0" placeholder="logitud de Lado"></input>
+	<input type="button" onclick="calcularArea()" value="calcular area"></input>
+</body>
+<script>
+		function calcularArea(){
+				let base =  document.querySelector("#base").value;
+				base = parseFloat(base);
+				let result = Math.pow(base,2); //base^2
+				alert(`el area es ${result}`);
+		}
+	</script>
