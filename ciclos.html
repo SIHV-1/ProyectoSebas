@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciclos</title>
+    
+</head>
+
+<body>
+    <h1>El codigo esta en consola</h1> 
+    <a href="../index.html"><h2>Regresar al inicio</h2></a>
+
+</body>
+<script>
+
+
+    for (let i = 1; i < 11; i++) {
+        for (let j = 1; j < 11; j++) {
+        let result = i * j;
+        
+            console.log(`${i}x${j}=${result}`);
+            }
+        }
+    function calcularArea(base, altura) {
+        return base * altura;
+    }
+    function calculaPerimetro(base, altura) {
+        return 2 * base + 2 * altura;
+    }
+  
+    
+    let results = [];
+    for (let i = 1; i <= 10; i++) {
+        results[i] = `area del rectangulo base=${3} altura=${i} area=${calcularArea(3, i)} m2`;
+        document.querySelector("body").innerHTML += results[i];
+        document.querySelector("body").innerHTML += "<br/>";
+    }
+    document.querySelector("body").innerHTML += "<br/>";
+
+    let k = 0;
+    while (k <= 10) {
+        results[k] = `perimetro del rectangulo base=${3} altura=${k} perimetro=${calculaPerimetro(3, k)} m`;
+        document.querySelector("body").innerHTML += results[k];
+        document.querySelector("body").innerHTML += "<br/>";
+        k += 1;
+    }
+    document.querySelector("body").innerHTML += "<br/>";
+    let j = 0;
+    do {
+        results[j] = `area del triangulo base=${3} altura=${j} area=${calcularArea(3, j) / 2} m2`;
+        document.querySelector("body").innerHTML += results[j];
+        document.querySelector("body").innerHTML += "<br/>";
+        j += 1;
+    } while (j <= 10);
+    document.querySelector("body").innerHTML += "<br/>";
+
+
+</script>
+
+</html>
